@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YT Testing",
+  "version": "23.1.1",
+  "description": "Collects YouTube Studio analytics for A/B testing",
+  "permissions": ["cookies"],
+  "host_permissions": [
+    "https://studio.youtube.com/*",
+    "https://app.example.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://studio.youtube.com/*"],
+      "js": ["page-script.js"],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://studio.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

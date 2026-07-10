@@ -1,0 +1,14 @@
+node_modules/
+data/
+data/backups/
+.env
+*.log
+web/node_modules/
+web/.next/
+*.pdf
+uploads/
+dist/
+*.png
+*.csv
+.next/
+web/**/.next/
